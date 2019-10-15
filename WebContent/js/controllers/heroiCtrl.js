@@ -23,7 +23,11 @@ angular.module("heroi").controller("heroiCtrl", function ($scope, heroisService)
 	}
 
 	vm.cadastroJogador= function(){ //função para cadastrar jogador
-		vm.user
+		vm.service.cadastroJogador(vm.user).success(function(data){
+
+		}).error(function(data, status){
+			vm.message = "Aconteceu um problema: " + data;
+		});
 	}
 
 	vm.irLogin = function () {

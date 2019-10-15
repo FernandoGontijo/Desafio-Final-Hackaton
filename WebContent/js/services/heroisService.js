@@ -5,12 +5,13 @@ angular.module("heroi").factory("heroisService", function ($http) {
 	};
 
 
-	var cadastroHeroi = function(){
-		return $http.post(baseUrl + '/jogador')
+	var _cadastroJogador = function(user){
+		return $http.post(baseUrl + '/jogador', user)
 	}
 
 	return {
-		getHerois: _getHerois
+		getHerois: _getHerois,
+		cadastroJogador: _cadastroJogador
 	};	
 
 	
