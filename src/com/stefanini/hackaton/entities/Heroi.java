@@ -18,8 +18,9 @@ public class Heroi implements Serializable {
 	 */
 	private static final long serialVersionUID = 1L;
 
-	private Integer id;
 	@Id
+	private Integer id;
+	
 	private Integer ataque;
 	private Integer defesa;
 	private Integer inteligencia;

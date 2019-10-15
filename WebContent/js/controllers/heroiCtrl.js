@@ -22,6 +22,10 @@ angular.module("heroi").controller("heroiCtrl", function ($scope, heroisService)
 		vm.login = false;
 	}
 
+	vm.cadastroJogador= function(){ //função para cadastrar jogador
+		vm.user
+	}
+
 	vm.irLogin = function () {
 		vm.login = true;
 		vm.cadastrar = false;

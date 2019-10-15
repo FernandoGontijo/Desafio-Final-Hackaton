@@ -1,0 +1,12 @@
+/home/fernando/Área de Trabalho/Desafio-Final-Hackaton/src/com/stefanini/hackaton/dto/HeroiDto.java
+/home/fernando/Área de Trabalho/Desafio-Final-Hackaton/src/com/stefanini/hackaton/api/HeroiApi.java
+/home/fernando/Área de Trabalho/Desafio-Final-Hackaton/src/com/stefanini/hackaton/parsers/HeroiParserDTO.java
+/home/fernando/Área de Trabalho/Desafio-Final-Hackaton/src/com/stefanini/hackaton/parsers/AbstractParser.java
+/home/fernando/Área de Trabalho/Desafio-Final-Hackaton/src/com/stefanini/hackaton/persistence/HeroiDAO.java
+/home/fernando/Área de Trabalho/Desafio-Final-Hackaton/src/com/stefanini/hackaton/persistence/GenericDAO.java
+/home/fernando/Área de Trabalho/Desafio-Final-Hackaton/src/com/stefanini/hackaton/rest/config/MensagemErro.java
+/home/fernando/Área de Trabalho/Desafio-Final-Hackaton/src/com/stefanini/hackaton/rest/config/CorsFilter.java
+/home/fernando/Área de Trabalho/Desafio-Final-Hackaton/src/com/stefanini/hackaton/rest/exceptions/NegocioException.java
+/home/fernando/Área de Trabalho/Desafio-Final-Hackaton/src/com/stefanini/hackaton/entities/Heroi.java
+/home/fernando/Área de Trabalho/Desafio-Final-Hackaton/src/com/stefanini/hackaton/rest/config/ErrorFilter.java
+/home/fernando/Área de Trabalho/Desafio-Final-Hackaton/src/com/stefanini/hackaton/service/HeroiService.java
