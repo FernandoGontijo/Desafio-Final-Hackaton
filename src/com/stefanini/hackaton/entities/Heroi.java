@@ -3,6 +3,8 @@ package com.stefanini.hackaton.entities;
 import java.io.Serializable;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
@@ -19,8 +21,8 @@ public class Heroi implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Integer id;
-	
 	private Integer ataque;
 	private Integer defesa;
 	private Integer inteligencia;

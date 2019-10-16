@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+
+<html ng-app="heroi">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Batalha de Herois</title>
+	<link rel="stylesheet" type="text/css" href="lib/bootstrap/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="css/app.css">
+	<script src="lib/angular/angular.js"></script>
+	<script src="lib/angular/angular-messages.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/controllers/batalhaCtrl.js"></script>
+</head>
+<body ng-controller="batalhaCtrl as ctrl">
+
+    <div class="jumbotron jumbotron-fefe" ng-if="!ctrl.adversario.heroi">
+        <button ng-click="ctrl.setTipoAdversario('M')">Máquina</button>
+        <button ng-click="ctrl.setTipoAdversario('J')">Jogador</button>
+
+        <!-- <select name="heroi" id="heroi" class="form-control"
+            ng-options="heroi as heroi.nome for heroi in vm.herois"
+             ng-model="ctrl.adversario.heroi"></select> -->
+        <select name="heroi" id="heroi" class="form-control"
+            ng-model="ctrl.adversario.heroi" ng-if="ctrl.adversario.tipo == 'J'">
+            <option value="">Selecione</option>
+            <option value="1">Batman</option>
+        </select>
+    </div>
+
+    <div class="jumbotron jumbotron-fefe" ng-if="ctrl.adversario.heroi">
+
+        <div class="row">
+            <div class="col-lg-6">
+                <label >Jogador 1</label>
+            </div>
+            <div class="col-lg-6">
+                <label >Jogador 2</label>
+            </div>
+        </div>
+
+        <input class="btn btn-primary btn-lg" type="button" value="Batalhar!">
+
+        <div class="row">
+            <div class="col-lg-6">
+                <label >Heroi</label>
+            </div>
+            <div class="col-lg-6">
+                <label >Heroi</label>
+            </div>
+        </div>
+
+        <br><br>
+
+        <label >Jogador 1 venceu!</label>
+
+        <br><br>
+
+        <a>visualizar detalhes da batalha</a>
+
+    </div>
+  
+</body>
+</html>
