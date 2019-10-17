@@ -16,7 +16,7 @@
 
     <div class="jumbotron jumbotron-fefe" ng-if="!ctrl.adversario.heroi">
         <button ng-click="ctrl.setTipoAdversario('M')">Máquina</button>
-        <button ng-click="ctrl.setTipoAdversario('J')">Jogador</button>
+        <button ng-click="ctrl.setTipoAdversario('J')">Jogador</button> <br> <br>
 
         <!-- <select name="heroi" id="heroi" class="form-control"
             ng-options="heroi as heroi.nome for heroi in vm.herois"
@@ -52,7 +52,7 @@
 
         <br><br>
 
-        <label >Jogador 1 venceu!</label>
+        <label >{{vm.vencedor.nome}} venceu!</label>
 
         <br><br>
 
