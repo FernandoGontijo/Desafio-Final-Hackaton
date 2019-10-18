@@ -7,10 +7,19 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.NamedQueries;
+import javax.persistence.NamedQuery;
 import javax.persistence.Table;
+
+
+
+
+
 
 @Entity
 @Table(name = "jogador")
+@NamedQueries({ @NamedQuery(name = "Jogador.findByNomeSenha", query = "SELECT j FROM Jogador j WHERE J.nickname= :nickname AND j.senha= :senha") })
 public class Jogador implements Serializable {
 
 	/**
@@ -20,13 +29,13 @@ public class Jogador implements Serializable {
 
 	
 	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer id;
 	private String nickname;
 	private String senha;
 	
-	
-	@JoinColumn(name="idHeroi")
+	@ManyToOne
+	@JoinColumn(name="idHeroi", referencedColumnName = "id")
 	private Heroi heroi;
 
 	public Integer getId() {

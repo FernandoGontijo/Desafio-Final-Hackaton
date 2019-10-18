@@ -8,25 +8,28 @@ import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 
-import com.stefanini.hackaton.dto.JogadorDTO;
-import com.stefanini.hackaton.service.JogadorService;
+import com.stefanini.hackaton.dto.LoginDTO;
+import com.stefanini.hackaton.service.LoginService;
 
-@Path("/jogador")
+
+
+@Path("/login")
 @Produces(MediaType.APPLICATION_JSON)
 @Consumes(MediaType.APPLICATION_JSON)
-public class JogadorApi {
+public class LoginApi {
 
 	@Inject
-	JogadorService jogadorService;
+	LoginService loginService;
 	
 	
 	@POST
-	public Response cadastrar(JogadorDTO dto) {
+	public Response login(LoginDTO dto) {
 		
-		jogadorService.inserir(dto);
-		return Response.ok().build();
+			
+		
+		
+		return Response.ok(loginService.verificar(dto)).build();
 	}
-	
 	
 	
 }
