@@ -9,6 +9,7 @@ import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 
 import com.stefanini.hackaton.dto.LoginDTO;
+import com.stefanini.hackaton.rest.exceptions.NegocioException;
 import com.stefanini.hackaton.service.LoginService;
 
 
@@ -23,12 +24,12 @@ public class LoginApi {
 	
 	
 	@POST
-	public Response login(LoginDTO dto) {
+	public Response login(LoginDTO dto) throws NegocioException {
 		
-			
+		loginService.verificar(dto);
 		
 		
-		return Response.ok(loginService.verificar(dto)).build();
+		return Response.ok().build();
 	}
 	
 	

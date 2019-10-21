@@ -13,11 +13,16 @@ angular.module("heroi").factory("heroisService", function ($http) {
 	var _getVencedor = function(){
 		return $http.get(baseUrl + '/vencedor');
 	}
+	
+	var _login = function (usuario) {
+        return $http.post(baseUrl + '/login', usuario);
+    };
 
 	return {
 		getHerois: _getHerois,
 		cadastroJogador: _cadastroJogador,
-		getVencedor: _getVencedor
+		getVencedor: _getVencedor,
+		login: _login
 	};	
 
 	

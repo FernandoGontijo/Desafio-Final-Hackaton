@@ -19,6 +19,7 @@ public class JogadorDTO implements Serializable {
 	
 	
 	
+
 	public Integer getId() {
 		return id;
 	}

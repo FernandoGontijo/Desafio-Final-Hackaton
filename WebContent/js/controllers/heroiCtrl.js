@@ -1,8 +1,13 @@
-angular.module("heroi").controller("heroiCtrl", function ($scope, heroisService) {
+angular.module("heroi").controller("heroiCtrl", function ($scope, heroisService, $location ) {
 	var vm = this;
 	vm.app = "Heróis";
 	vm.service = heroisService;
 	vm.herois = [];
+	
+	vm.usuario = {
+			nickname: null,
+			senha:null
+	}
 
 	vm.init = function(){
 		vm.login = true;
@@ -28,10 +33,26 @@ angular.module("heroi").controller("heroiCtrl", function ($scope, heroisService)
 		}).error(function(data, status){
 			vm.message = "Aconteceu um problema: " + data;
 		});
+		
+		vm.irLogin();
 	}
 
 	vm.irLogin = function () {
 		vm.login = true;
 		vm.cadastrar = false;
+	}
+	
+
+	vm.Login = function(){
+		
+		vm.service.login(vm.usuario).success(function(data){
+			   
+		$location.path("/batalha");
+			   
+			   
+		}).error(function(data, status){
+			vm.message = data;
+		});
+		
 	}
 });

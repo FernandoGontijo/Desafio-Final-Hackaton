@@ -62,6 +62,7 @@ public class GenericDAO<P, E extends Serializable> {
 		em.remove(e);
 	}
 
+	@Transactional
 	public EntityManager getEntityManager() {
 		return em;
 	}

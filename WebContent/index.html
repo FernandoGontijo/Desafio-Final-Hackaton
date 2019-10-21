@@ -10,6 +10,7 @@
 	<script src="js/app.js"></script>
 	<script src="js/controllers/heroiCtrl.js"></script>
 	<script src="js/services/heroisService.js"></script>
+	 <script src="view/index.html"></script>
 </head>
 
 <body ng-controller="heroiCtrl as vm" ng-init="vm.init()">
@@ -20,29 +21,29 @@
 		<div ng-if="vm.login">
 			<form>
 				<div class="form-group">
-					<label>Login</label>
-					<input type="texto" class="form-control" placeholder="SuperFulano012" ng-model="vm.user.nickname">
+					<label >Login</label>
+					<input type="texto" class="form-control" placeholder="SuperFulano012" ng-model="vm.usuario.nickname">
 				</div>
 				<div class="form-group">
-					<label>Senha</label>
-					<input type="password" class="form-control" ng-model="vm.user.senha">
+					<label >Senha</label>
+					<input type="password" class="form-control" ng-model="vm.usuario.senha">
 				</div>
-				<button class="btn btn-success">Entrar</button>
+				<button class="btn btn-success" ng-click="vm.Login()">Entrar</button>
 				<button class="btn btn-primary" ng-click="vm.irCadastrar()">Cadastrar</button>
 			</form>
 		</div>
 		<div ng-if="vm.cadastrar">
 			<form>
 				<div class="form-group">
-					<label>Login</label>
+					<label >Login</label>
 					<input type="texto" class="form-control" placeholder="SuperFulano012" ng-model="vm.user.nickname">
 				</div>
 				<div class="form-group">
-					<label>Senha</label>
+					<label >Senha</label>
 					<input type="password" class="form-control" ng-model="vm.user.senha">
 				</div>
 				<div class="form-group">
-					<label>Heroi</label>
+					<label >Heroi</label>
 					<select name="heroi" id="heroi" class="form-control"
 						ng-options="heroi as heroi.nome for heroi in vm.herois" ng-model="vm.user.heroi"></select>
 					<div ng-if="vm.user.heroi">

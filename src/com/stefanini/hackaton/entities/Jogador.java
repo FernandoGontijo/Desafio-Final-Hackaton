@@ -13,13 +13,16 @@ import javax.persistence.NamedQuery;
 import javax.persistence.Table;
 
 
-
-
-
+//
+//
+//@NamedQueries(value = { @NamedQuery(name = "Jogador.findByNomeSenha", query = "SELECT j FROM Jogador j WHERE J.nickname= :nickname AND j.senha= :senha"),
+//	@NamedQuery(name = "Jogador.findByNome", query = "SELECT j FROM Jogador j WHERE J.nickname= :nickname"),
+//	@NamedQuery(name = "Jogador.getByIdHeroi", query = "SELECT j FROM Jogador j WHERE J.heroi.id= :idHeroi"),
+//	@NamedQuery(name = "Jogador.deleteById", query = "DELETE FROM Jogador j WHERE J.id = :id")
+//})
 
 @Entity
 @Table(name = "jogador")
-@NamedQueries({ @NamedQuery(name = "Jogador.findByNomeSenha", query = "SELECT j FROM Jogador j WHERE J.nickname= :nickname AND j.senha= :senha") })
 public class Jogador implements Serializable {
 
 	/**
